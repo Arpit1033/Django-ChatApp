@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 </head>
 <body>
     {% comment %} Header {% endcomment %}
@@ -27,5 +28,7 @@
 
     {% comment %} Footer {% endcomment %}
     {% include "snippets/footer.html" %}
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
