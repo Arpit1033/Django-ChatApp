@@ -151,3 +151,5 @@ BASE_DIR = "http://127.0.0.1:8000"
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    
+BASE_URL = "http://127.0.0.1:8000"
