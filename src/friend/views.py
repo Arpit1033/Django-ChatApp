@@ -3,6 +3,7 @@ import json
 
 from account.models import Account
 from friend.models import FriendRequest
+from django.shortcuts import render, redirect
 
 
 def send_friend_request(request, *args, **kwargs):
@@ -39,3 +40,18 @@ def send_friend_request(request, *args, **kwargs):
 	else:
 		payload['response'] = "You must be authenticated to send a friend request."
 	return HttpResponse(json.dumps(payload), content_type="application/json")
+
+def friend_requests(request, *args, **kwargs):
+	context = {}
+	user = request.user
+	if user.is_authenticated:
+		user_id = kwargs.get("user_id")
+		account = Account.objects.get(pk=user_id)
+		if account == user:
+			friend_requests = FriendRequest.objects.filter(receiver=account, is_active=True)
+			context['friend_requests'] = friend_requests
+		else:
+			return HttpResponse("You can't view another users friend requets.")
+	else:
+		redirect("login")
+	return render(request, "friend/friend_requests.html", context)
