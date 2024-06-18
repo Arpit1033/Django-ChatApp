@@ -87,3 +87,15 @@
 	</div>
 	<!-- END SMALL SCREENS -->
 </div>
+
+<script type="text/javascript">
+	function executeQuery() {
+		var query = ""
+		query = document.getElementById('id_q_small').value;
+		if (query == ""){
+			query = document.getElementById('id_q_large').value;
+		}
+	    window.location.replace("{% url 'search' %}?q=" + query)
+	    return false
+	}
+</script>
