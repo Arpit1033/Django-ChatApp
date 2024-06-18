@@ -1,5 +1,8 @@
+import json
+from django.http import HttpResponse
 from django.shortcuts import render
-from friend.models import FriendRequest, FriendList
+from friend.models import FriendList
+from account.models import Account
 
 # Create your views here.
 def remove_friend(request, *args, **kwargs):
