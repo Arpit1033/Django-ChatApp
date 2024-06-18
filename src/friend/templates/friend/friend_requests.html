@@ -59,8 +59,8 @@
 				</div>
 			</a>
 			<div class="d-flex flex-row card-right flex-grow-1 justify-content-end mx-2">
-	  			<span id="id_cancel_{{request.sender.id}}" class="decline-friend-request material-icons p-1" onclick='triggerDeclineFriendRequest("{{request.id}}")'>cancel</span>
-	  			<span id="id_confirm_{{request.sender.id}}" class="confirm-friend-request material-icons p-1" onclick='triggerAcceptFriendRequest("{{request.id}}")'>check</span>
+	  			<span id="id_cancel_{{request.sender.id}}" class="decline-friend-request material-symbols-outlined p-1" onclick='triggerDeclineFriendRequest("{{request.id}}")'>cancel</span>
+	  			<span id="id_confirm_{{request.sender.id}}" class="confirm-friend-request material-symbols-outlined p-1" onclick='triggerAcceptFriendRequest("{{request.id}}")'>check</span>
 			</div>
 		</div>
 		{% if forloop.counter|divisibleby:2 %}
