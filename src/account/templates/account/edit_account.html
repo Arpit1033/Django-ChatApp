@@ -210,8 +210,6 @@
 
 	/* return null if invalid or base64String if valid */
 	function isImageSizeValid(image){
-		console.log("max size: {{DATA_UPLOAD_MAX_MEMORY_SIZE}}")
-		// console.log(image)
 		var startIndex = image.indexOf("base64,") + 7;
 		var base64str = image.substr(startIndex);
 		var decoded = atob(base64str);
