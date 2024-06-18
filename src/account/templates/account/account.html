@@ -230,7 +230,7 @@
 	var removeFriendBtn = document.getElementById("id_unfriend_btn")
 	if (removeFriendBtn != null){
 		removeFriendBtn.addEventListener("click", function(){
-			//removeFriend("{{id}}", onFriendRemoved)
+			removeFriend("{{id}}", onFriendRemoved)
 		})
 	}
 
@@ -246,4 +246,5 @@
 
 {% include 'friend/snippets/send_friend_request.html' %}
 {% include 'friend/snippets/accept_friend_request.html' %}
+{% include 'friend/snippets/remove_friend.html' %}
 {% endblock content %}
