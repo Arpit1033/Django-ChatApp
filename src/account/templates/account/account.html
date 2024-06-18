@@ -73,7 +73,7 @@
 		  <div class="card-body">
 		  	<div class="d-flex flex-column justify-content-center p-4">
 		  		<div class="image-container mx-auto mb-4">
-		  			<img class="d-block border border-dark rounded-circle img-fluid mx-auto profile-image" alt="codingwithmitch logo" id="id_profile_image" src="{{profile_image}}">
+		  			<img class="d-block border border-dark rounded-circle img-fluid mx-auto profile-image" alt="my logo" id="id_profile_image" src="{{profile_image}}">
 		  		</div>
 		  		<p class="mt-4 mb-1 field-heading">Email</p>
 		  		{%  if is_self %}
@@ -107,8 +107,8 @@
 			<div class="card m-2 p-4">
 				<div class="d-flex flex-row align-items-center">
 					<span class="friend-text align-items-center mr-2">Accept Friend Request</span>
-					<span id="id_cancel_{{id}}" class="decline-friend-request material-icons p-1" onclick='triggerDeclineFriendRequest("{{pending_friend_request_id}}")'>cancel</span>
-  					<span id="id_confirm_{{id}}" class="confirm-friend-request material-icons p-1" onclick='triggerAcceptFriendRequest("{{pending_friend_request_id}}")'>check</span>
+					<span id="id_cancel_{{id}}" class="decline-friend-request material-symbols-outlined p-1" onclick='triggerDeclineFriendRequest("{{pending_friend_request_id}}")'>cancel</span>
+  					<span id="id_confirm_{{id}}" class="confirm-friend-request material-symbols-outlined p-1" onclick='triggerAcceptFriendRequest("{{pending_friend_request_id}}")'>check</span>
 				</div>
 			</div>
 			{% endif %}
