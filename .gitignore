@@ -1,9 +1,4 @@
-myenv/
-__pycache__/
-static_cdn/
-.pyc
-migrations/
-db.sqlite3
-media/
-static/
-media_cdn/
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+**/__pycache__**
